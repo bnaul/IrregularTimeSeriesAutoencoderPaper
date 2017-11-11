@@ -9,12 +9,11 @@ from autoencoder import encoder, decoder
 from light_curve import LightCurve
 
 
-def preprocess(X_raw, m_max=None):
+def preprocess(X_raw, m_max=np.inf):
     X = X_raw.copy()
 
-    if m_max:
-        wrong_units = np.nanmax(X[:, :, 1], axis=1) > m_max
-        X = X[~wrong_units, :, :]
+    wrong_units =  np.all(np.isnan(X[:, :, 1])) | (np.nanmax(X[:, :, 1], axis=1) > m_max)
+    X = X[~wrong_units, :, :]
 
     # Replace times w/ lags
     X[:, :, 0] = ku.times_to_lags(X[:, :, 0])
@@ -60,6 +59,8 @@ def main(args=None):
     X_list = [np.c_[lc.times, lc.measurements, lc.errors] for lc in split]
 
     X_raw = pad_sequences(X_list, value=np.nan, dtype='float', padding='post')
+    if args.N_train is not None:
+        X_raw = X_raw[:args.N_train]
 
     model_type_dict = {'gru': GRU, 'lstm': LSTM, 'vanilla': SimpleRNN}
     X, means, scales, wrong_units = preprocess(X_raw, args.m_max)

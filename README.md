@@ -1,6 +1,5 @@
 # Neural network autoencoders for unevenly sampled time series
-Code accompanying "An unsupervised neural network that outperforms on
-classification of unevenly sampled time series".
+Code accompanying "A recurrent neural network for classification of unevenly sampled variable stars".
 
 - Code for scores/figures is found in `figures.ipynb`
 - Autoencoder network architecture is defined in `autoencoder.py`
