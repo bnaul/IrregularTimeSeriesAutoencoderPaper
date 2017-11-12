@@ -1,4 +1,6 @@
 # Neural network autoencoders for unevenly sampled time series
+[![DOI](https://zenodo.org/badge/90776775.svg)](https://zenodo.org/badge/latestdoi/90776775)
+
 Code accompanying "A recurrent neural network for classification of unevenly sampled variable stars".
 
 - Code for scores/figures is found in `figures.ipynb`
