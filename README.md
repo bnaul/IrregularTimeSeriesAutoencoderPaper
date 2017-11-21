@@ -10,6 +10,8 @@ Code accompanying "A recurrent neural network for classification of unevenly sam
     - Light curve data is in `./data`
 - Model weights are saved in `./keras_logs`
 
+The DOI for the paper is: 10.1038/s41550-017-0321-z
+
 You can cite this code as:
 ```
 @misc{brett_naul_2017_1045560,
