@@ -10,4 +10,4 @@ Code accompanying "A recurrent neural network for classification of unevenly sam
     - Light curve data is in `./data`
 - Model weights are saved in `./keras_logs`
 
-Mirror at https://gitlab.com/cesium-ml/IrregularTimeSeriesAutoencoderPaper
+See mirror at https://gitlab.com/cesium-ml/IrregularTimeSeriesAutoencoderPaper to download the full set of input data.
