@@ -8,7 +8,7 @@ keras==1.2.2
 git+https://github.com/bstriner/keras-tqdm.git
 h5py
 gatspy
-joblib==0.11
+joblib==1.2.0
 notebook
 natsort
 gatspy
