@@ -4,7 +4,7 @@ scikit-learn
 matplotlib
 seaborn
 tensorflow
-keras==1.2.2
+keras==2.13.1
 git+https://github.com/bstriner/keras-tqdm.git
 h5py
 gatspy
